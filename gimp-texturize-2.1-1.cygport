@@ -1,0 +1,15 @@
+CATEGORY="Graphics"
+SUMMARY="GIMP image texturizing/tiling plugin"
+DESCRIPTION="This plugin works with the GIMP (the GNU Image Manipulation
+Program). Its purpose is to generate large textures from a small sample.
+It can also generate tileable textures."
+HOMEPAGE="http://gimp-texturize.sourceforge.net/"
+SRC_URI="mirror://sourceforge/gimp-texturize/texturize-${PV}_src.tgz"
+SRC_DIR=${PN}
+
+PATCH_URI="
+	http://patch-tracker.debian.org/patch/series/dl/gimp-texturize/2.1-2/move_image_to_heap
+	http://patch-tracker.debian.org/patch/series/dl/gimp-texturize/2.1-2/fix_cast_warnings
+	http://patch-tracker.debian.org/patch/series/dl/gimp-texturize/2.1-2/remove_non_public_gimpimage_pdb_header
+	01-math-HUGE.patch
+"
